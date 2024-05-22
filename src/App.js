@@ -13,9 +13,9 @@ function StepSection() {
   return (
     <>
       <div className="step-section">
-        <button onClick={() => setStep(step - 1)}>-</button>
+        <button onClick={() => setStep((s) => s - 1)}>-</button>
         <span>Step: {step}</span>
-        <button onClick={() => setStep(step + 1)}>+</button>
+        <button onClick={() => setStep((s) => s + 1)}>+</button>
       </div>
       <CountSection stepCounter={step} />
     </>
@@ -27,9 +27,9 @@ function CountSection({ stepCounter }) {
   return (
     <>
       <div className="count-section">
-        <button onClick={() => setCount(count - stepCounter)}>-</button>
+        <button onClick={() => setCount((c) => c - stepCounter)}>-</button>
         <span>Count: {count}</span>
-        <button onClick={() => setCount(count + stepCounter)}>+</button>
+        <button onClick={() => setCount((c) => c + stepCounter)}>+</button>
       </div>
       <DateSection count={count} />
     </>
