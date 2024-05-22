@@ -12,7 +12,7 @@ function StepSection() {
   return (
     <div className="step-section">
       <button>-</button>
-      <span>Step: 1</span>
+      <span>Step: 0</span>
       <button>+</button>
     </div>
   );
@@ -20,9 +20,9 @@ function StepSection() {
 
 function CountSection() {
   return (
-    <div className="step-section">
+    <div className="count-section">
       <button>-</button>
-      <span>Count: 1</span>
+      <span>Count: 0</span>
       <button>+</button>
     </div>
   );
