@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function App() {
   return (
     <div className="wrapper">
@@ -9,21 +11,23 @@ export default function App() {
 }
 
 function StepSection() {
+  const [step, setStep] = useState(0);
   return (
     <div className="step-section">
-      <button>-</button>
-      <span>Step: 0</span>
-      <button>+</button>
+      <button onClick={() => setStep(step - 1)}>-</button>
+      <span>Step: {step}</span>
+      <button onClick={() => setStep(step + 1)}>+</button>
     </div>
   );
 }
 
 function CountSection() {
+  const [count, setCount] = useState(0);
   return (
     <div className="count-section">
-      <button>-</button>
-      <span>Count: 0</span>
-      <button>+</button>
+      <button onClick={() => setCount(count - 1)}>-</button>
+      <span>Count: {count}</span>
+      <button onClick={() => setCount(count + 1)}>+</button>
     </div>
   );
 }
