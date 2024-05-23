@@ -36,7 +36,13 @@ function CountSection({ stepCounter }) {
     <>
       <div className="count-section">
         <button onClick={() => setCount((c) => c - stepCounter)}>-</button>
-        <span>Count: {count}</span>
+        <input
+          type="number"
+          value={count}
+          onChange={(e) => {
+            setCount((c) => (c = +e.target.value));
+          }}
+        ></input>
         <button onClick={() => setCount((c) => c + stepCounter)}>+</button>
       </div>
       <DateSection count={count} />

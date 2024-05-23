@@ -24,8 +24,9 @@ body {
   font-size: 24px;
   margin-bottom: 18px;
   min-width: 175px;
-  max-width: 200px;
+  max-width: 240px;
   gap: 12px;
+  justify-content: center;
 }
 
 .step-section button,
@@ -46,6 +47,18 @@ body {
   background-color: #fff;
   color: black;
   border: 1px solid black;
+}
+
+.count-section input,
+.step-section input {
+  height: 30px;
+  width: 100%;
+  outline: none;
+}
+
+.count-section input {
+  padding: 0 8px;
+  font-size: 16px;
 }
 
 .output {
