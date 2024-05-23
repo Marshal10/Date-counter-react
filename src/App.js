@@ -3,19 +3,27 @@ import { useState } from "react";
 export default function App() {
   return (
     <div className="wrapper">
-      <StepSection />
+      <MainSection />
     </div>
   );
 }
 
-function StepSection() {
+function MainSection() {
   const [step, setStep] = useState(1);
   return (
     <>
       <div className="step-section">
-        <button onClick={() => setStep((s) => s - 1)}>-</button>
+        {/* <button onClick={() => setStep((s) => s - 1)}>-</button>
         <span>Step: {step}</span>
-        <button onClick={() => setStep((s) => s + 1)}>+</button>
+        <button onClick={() => setStep((s) => s + 1)}>+</button> */}
+        <input
+          type="range"
+          min={0}
+          max={10}
+          value={step}
+          onChange={(e) => setStep((s) => (s = +e.target.value))}
+        ></input>
+        <span>{step}</span>
       </div>
       <CountSection stepCounter={step} />
     </>

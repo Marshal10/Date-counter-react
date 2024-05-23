@@ -20,12 +20,12 @@ body {
 .count-section {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   font-size: 24px;
   margin-bottom: 18px;
   min-width: 175px;
   max-width: 200px;
+  gap: 12px;
 }
 
 .step-section button,
